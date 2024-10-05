@@ -1,0 +1,33 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[keys.normal]
+A-q = ":reflow"
+A-L = "switch_to_lowercase"
+A-U = "switch_to_uppercase"
+
+[keys.insert]
+A-q = ":reflow"
+
+[keys.normal.backspace]
+b = ":run-shell-command zellij run -f -- cargo build"
+d = ":run-shell-command zellij run -f -- cargo run"
+r = ":run-shell-command zellij run -f -- cargo run --release"
+t = ":run-shell-command zellij run -f -- cargo test"
+g = ":run-shell-command zellij run -fc -- gitui"
+
+[keys.normal.g]
+x = ":buffer-close"
+j = "jump_backward"
+k = "jump_forward"
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
