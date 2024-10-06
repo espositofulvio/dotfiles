@@ -775,7 +775,6 @@ $env.config = {
     ]
 }
 
-use ~/.cache/starship/init.nu
-
 source ~/.config/nushell/fnm.nu
 
+use ~/.cache/starship/init.nu

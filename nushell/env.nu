@@ -86,6 +86,7 @@ if (($env.PATH | split row (char esep) | any {|it| $it | str contains $'($env.HO
     $env.PATH = ($env.PATH | split row (char esep) | prepend $'($env.HOME)/bin') 
 }
 
+$env.JAVA_HOME = '/home/linuxbrew/.linuxbrew/opt/openjdk@11'
 $env.COLORTERM = 'truecolor'
 $env.HOMEBREW_CELLAR = '/home/linuxbrew/.linuxbrew/Cellar'
 $env.HOMEBREW_PREFIX = '/home/linuxbrew/.linuxbrew'
@@ -93,7 +94,6 @@ $env.HOMEBREW_REPOSITORY = '/home/linuxbrew/.linuxbrew/Homebrew'
 $env.XDG_CURRENT_DESKTOP = 'Unity'
 
 $env.ANDROID_HOME = '/home/mentalist/Android/Sdk/'
-$env.JAVA_HOME = '/home/mentalist/.jdks/corretto-1.8.0_412'
 $env.CAPACITOR_ANDROID_STUDIO_PATH  = '/opt/android-studio/bin/studio.sh'
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.cargo/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/bin')
@@ -111,5 +111,6 @@ $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/platform-tools')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/opt/gradle@7/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/opt/openjdk@11/bin')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/run/user/1000/fnm_multishells/5855_1693429904358/bin')
 $env.TERM = 'xterm-256color'
