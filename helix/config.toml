@@ -3,6 +3,11 @@ theme = "gruvbox"
 [editor]
 line-number = "relative"
 bufferline = "always"
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"
 
 [editor.cursor-shape]
 insert = "bar"
