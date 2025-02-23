@@ -780,8 +780,8 @@ $env.config = {
     ]
 }
 
-source ~/.config/nushell/fnm.nu
-
+#source ~/.config/nushell/fnm.nu
+alias hx = helix
 use ~/.cache/starship/init.nu
 
 # zellij

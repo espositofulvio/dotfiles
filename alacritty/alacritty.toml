@@ -1,0 +1,13 @@
+[general]
+import = [
+  'gruvbox_dark.toml'
+]
+[font]
+size = 13.0
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[terminal.shell]
+program = "nu"
