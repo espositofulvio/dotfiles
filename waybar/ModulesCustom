@@ -11,8 +11,8 @@
 	"format-alt-click": "click",
 	"interval": 3600,
 	"return-type": "json",
-	"exec": "$HOME/.config/hypr/UserScripts/Weather.sh",
-	//"exec": "$HOME/.config/hypr/UserScripts/Weather.py",
+	"exec": "/home/mentalist/.config/hypr/UserScripts/Weather.sh",
+	//"exec": "/home/mentalist/.config/hypr/UserScripts/Weather.py",
 	"exec-if": "ping wttr.in -c1",
 	"tooltip": true,
 },
@@ -40,31 +40,31 @@
 
 "custom/settings": {
 	"format": " ",
-	"on-click": "$HOME/.config/hypr/UserScripts/QuickEdit.sh",
+	"on-click": "/home/mentalist/.config/hypr/UserScripts/QuickEdit.sh",
 	"tooltip": true,
 	"tooltip-format": "Launch Quick Edit",
 },
 
 "custom/cycle_wall": {
 	"format": " ",
-	"on-click": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
-	"on-click-right": "$HOME/.config/hypr/UserScripts/WallpaperRandom.sh",
-	"on-click-middle": "$HOME/.config/hypr/scripts/WaybarStyles.sh",
+	"on-click": "/home/mentalist/.config/hypr/UserScripts/WallpaperSelect.sh",
+	"on-click-right": "/home/mentalist/.config/hypr/UserScripts/WallpaperRandom.sh",
+	"on-click-middle": "/home/mentalist/.config/hypr/scripts/WaybarStyles.sh",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Wallpaper Menu\nMiddle Click: Random wallpaper\nRight Click: Waybar Styles Menu",
 },
 
 "custom/hint": {
 	"format": "󰺁 HINT!",
-	"on-click": "$HOME/.config/hypr/scripts/KeyHints.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/KeyBinds.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/KeyHints.sh",
+	"on-click-right": "/home/mentalist/.config/hypr/scripts/KeyBinds.sh",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Quick Tips\nRight Click: Keybinds",
 },
 
 "custom/dot_update": {
 	"format": " 󰁈 ",
-	"on-click": "$HOME/.config/hypr/scripts/KooLsDotsUpdate.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/KooLsDotsUpdate.sh",
 	"tooltip": true,
 	"tooltip-format": "Check KooL Dots update\nIf available",
 },
@@ -76,30 +76,30 @@
 	"escape": true,
 	"exec-on-event": true,
 	"interval": 60,
-	"exec": "$HOME/.config/hypr/scripts/Hypridle.sh status",
-	"on-click": "$HOME/.config/hypr/scripts/Hypridle.sh toggle",
+	"exec": "/home/mentalist/.config/hypr/scripts/Hypridle.sh status",
+	"on-click": "/home/mentalist/.config/hypr/scripts/Hypridle.sh toggle",
 	"on-click-right": "hyprlock"
 },
 
 "custom/keyboard": {
-	"exec": "cat $HOME/.cache/kb_layout",
+	"exec": "cat /home/mentalist/.cache/kb_layout",
 	"interval": 1,
 	"format": " {}",
-	"on-click": "$HOME/.config/hypr/scripts/SwitchKeyboardLayout.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/SwitchKeyboardLayout.sh",
 },
 
 "custom/light_dark": {
 	"format": "󰔎 ",
-	"on-click": "$HOME/.config/hypr/scripts/DarkLight.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/WaybarStyles.sh",
-	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/DarkLight.sh",
+	"on-click-right": "/home/mentalist/.config/hypr/scripts/WaybarStyles.sh",
+	"on-click-middle": "/home/mentalist/.config/hypr/UserScripts/WallpaperSelect.sh",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Switch Dark-Light Themes\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Styles Menu",
 },
 
 "custom/lock": {
 	"format": "󰌾",
-	"on-click": "$HOME/.config/hypr/scripts/LockScreen.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/LockScreen.sh",
 	"tooltip": true,
 	"tooltip-format": "󰷛 Screen Lock",
 },
@@ -107,14 +107,14 @@
 "custom/menu": {
 	"format": "",
 	"on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
-	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/WaybarLayout.sh",
+	"on-click-middle": "/home/mentalist/.config/hypr/UserScripts/WallpaperSelect.sh",
+	"on-click-right": "/home/mentalist/.config/hypr/scripts/WaybarLayout.sh",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu",
 },
 // This is a custom cava visualizer
 "custom/cava_mviz": {
-	"exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
+	"exec": "/home/mentalist/.config/hypr/scripts/WaybarCava.sh",
 	"format": "{}"
 },
 
@@ -127,15 +127,15 @@
 	"on-click": "playerctl previous",
 	"on-click-right": "playerctl next",
 	"scroll-step": 5.0,
-	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
-	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
+	"on-scroll-up": "/home/mentalist/.config/hypr/scripts/Volume.sh --inc",
+	"on-scroll-down": "/home/mentalist/.config/hypr/scripts/Volume.sh --dec",
 	"smooth-scrolling-threshold": 1,
 },
     
 "custom/power": {
 	"format": "⏻ ",
-	"on-click": "$HOME/.config/hypr/scripts/Wlogout.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/ChangeBlur.sh",
+	"on-click": "/home/mentalist/.config/hypr/scripts/Wlogout.sh",
+	"on-click-right": "/home/mentalist/.config/hypr/scripts/ChangeBlur.sh",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur",
 },
