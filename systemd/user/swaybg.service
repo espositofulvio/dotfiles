@@ -1,0 +1,9 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg -o HDMI-A-1 -m fill -i "%h/Pictures/wallpaper_monitor.jpg" -o eDP-2 -m fill -i "%h/Pictures/wallpaper_laptop.jpg"
+Restart=on-failure
+

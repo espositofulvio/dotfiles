@@ -92,13 +92,11 @@ $env.COLORTERM = 'truecolor'
 $env.HOMEBREW_CELLAR = '/home/linuxbrew/.linuxbrew/Cellar'
 $env.HOMEBREW_PREFIX = '/home/linuxbrew/.linuxbrew'
 $env.HOMEBREW_REPOSITORY = '/home/linuxbrew/.linuxbrew/Homebrew'
-$env.XDG_CURRENT_DESKTOP = 'Unity'
-
 $env.ANDROID_HOME = '/home/mentalist/Android/Sdk/'
 $env.CAPACITOR_ANDROID_STUDIO_PATH  = '/home/mentalist/.local/share/flatpak/app/com.google.AndroidStudio/current/active/files/extra/android-studio/bin/studio.sh'
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.cargo/bin')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/bin')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/sbin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.phpenv/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.phpenv/shims')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.local/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/sbin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/bin')
@@ -111,7 +109,5 @@ $env.PATH = ($env.PATH | split row (char esep) | append '/snap/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/platform-tools')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/opt/gradle@7/bin')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/opt/openjdk@11/bin')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/run/user/1000/fnm_multishells/5855_1693429904358/bin')
-$env.TERM = 'xterm-256color'
+fnm env --json | from json | load-env
+$env.PATH = ($env.PATH | append $"($env.FNM_MULTISHELL_PATH)/bin")

@@ -1,0 +1,16 @@
+/*
+   waybar dark colors
+*/
+
+@define-color bg_color #282828;
+@define-color fg_color #ebdbb2;
+@define-color tray_color #282828;
+@define-color accent_color #ebdbb2;
+@define-color highlight_color #d79921;
+@define-color invert_color #1A1B26;
+@define-color caution_color #ebcb8b;
+@define-color urgent_color #BF616A;
+@define-color middle_color #ebdbb2;
+@define-color first_right_color #ebdbb2;
+@define-color middle_right_color #ebdbb2;
+@define-color last_right_color #ebdbb2;

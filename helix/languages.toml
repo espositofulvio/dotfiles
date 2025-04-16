@@ -3,22 +3,17 @@ name = "rust"
 language-servers = ["rust-analyzer"]
 
 [language.debugger]
-command = "codelldb"
-name = "codelldb"
-port-arg = "--port {}"
-transport = "tcp"
+command = "lldb-dap"
+name = "lldb-dap"
+transport = "stdio"
 
 [[language.debugger.templates]]
 name = "binary"
 request = "launch"
+completion = [ { name = "binary", completion = "filename" } ]
+args = { program = "{0}" }
 
-[[language.debugger.templates.completion]]
-completion = "filename"
-name = "binary"
 
-[language.debugger.templates.args]
-program = "{0}"
-runInTerminal = true
 
 [[language]]
 name = "python"
@@ -36,3 +31,12 @@ args = ["--ignore", "E501"]
 [language.formatter]
 command = "ruff"
 args = ["format"]
+
+[language-server.phpactor]
+command = "phpactor"
+args = [ "language-server" ]
+config = { "language_server_completion.trim_leading_dollar" = true, "language_server_php_cs_fixer.enabled" = true, "language_server_php_cs_fixer.show_diagnostics" = false, "language_server_php_cs_fixer.bin" = "/home/mentalist/.local/bin/php-cs-fixer"}
+
+[[language]]
+name = "php"
+language-servers = [ "phpactor" ]
