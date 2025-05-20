@@ -11,3 +11,6 @@ style = "Regular"
 
 [terminal.shell]
 program = "nu"
+
+[window]
+padding = { x = 5, y = 5 }

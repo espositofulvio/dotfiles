@@ -87,7 +87,7 @@ if (($env.PATH | split row (char esep) | any {|it| $it | str contains $'($env.HO
 }
 
 $env.ZELLIJ_AUTO_EXIT = 'true'
-$env.JAVA_HOME = '/home/mentalist/.local/share/flatpak/app/com.google.AndroidStudio/current/active/files/extra/android-studio/jbr/'
+$env.JAVA_HOME = '/opt/android-studio/jbr'
 $env.COLORTERM = 'truecolor'
 $env.HOMEBREW_CELLAR = '/home/linuxbrew/.linuxbrew/Cellar'
 $env.HOMEBREW_PREFIX = '/home/linuxbrew/.linuxbrew'
@@ -109,5 +109,8 @@ $env.PATH = ($env.PATH | split row (char esep) | append '/snap/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/platform-tools')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/cmdline-tools/latest')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/build-tools')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/emulator')
 fnm env --json | from json | load-env
 $env.PATH = ($env.PATH | append $"($env.FNM_MULTISHELL_PATH)/bin")
