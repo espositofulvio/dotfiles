@@ -18,7 +18,7 @@ input {
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -227,10 +227,7 @@ layout {
 // spawn-at-startup "alacritty" "-e" "fish"
 
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
-spawn-at-startup "xwayland-satellite"
 environment {
-    DISPLAY ":0"
-    // Install libva-nvidia-driver and libva-utils
     LIBVA_DRIVER_NAME "nvidia"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     NVD_BACKEND "direct"
@@ -547,6 +544,7 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
     Mod+Alt+P { screenshot; }
+    Mod+O { toggle-overview; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

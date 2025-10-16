@@ -86,6 +86,7 @@ if (($env.PATH | split row (char esep) | any {|it| $it | str contains $'($env.HO
     $env.PATH = ($env.PATH | split row (char esep) | prepend $'($env.HOME)/bin') 
 }
 
+$env.EDITOR = 'helix'
 $env.ZELLIJ_AUTO_EXIT = 'true'
 $env.JAVA_HOME = '/opt/android-studio/jbr'
 $env.COLORTERM = 'truecolor'

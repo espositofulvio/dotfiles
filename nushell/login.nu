@@ -1,18 +1,19 @@
+if (($env.PATH | split row (char esep) | any {|it| $it | str contains $'($env.HOME)/bin'}) == false) { 
+    $env.PATH = ($env.PATH | split row (char esep) | prepend $'($env.HOME)/bin') 
+}
+
+$env.EDITOR = 'helix'
+$env.ZELLIJ_AUTO_EXIT = 'true'
+$env.JAVA_HOME = '/opt/android-studio/jbr'
 $env.COLORTERM = 'truecolor'
-$env.FNM_ARCH = 'x64'
-$env.FNM_COREPACK_ENABLED = 'false'
-$env.FNM_DIR = '/home/mentalist/.local/share/fnm'
-$env.FNM_LOGLEVEL = 'info'
-$env.FNM_MULTISHELL_PATH = '/run/user/1000/fnm_multishells/5855_1693429904358'
-$env.FNM_NODE_DIST_MIRROR = 'https://nodejs.org/dist'
-$env.FNM_RESOLVE_ENGINES = 'false'
-$env.FNM_VERSION_FILE_STRATEGY = 'local'
 $env.HOMEBREW_CELLAR = '/home/linuxbrew/.linuxbrew/Cellar'
 $env.HOMEBREW_PREFIX = '/home/linuxbrew/.linuxbrew'
 $env.HOMEBREW_REPOSITORY = '/home/linuxbrew/.linuxbrew/Homebrew'
+$env.ANDROID_HOME = '/home/mentalist/Android/Sdk/'
+$env.CAPACITOR_ANDROID_STUDIO_PATH  = '/home/mentalist/.local/share/flatpak/app/com.google.AndroidStudio/current/active/files/extra/android-studio/bin/studio.sh'
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.cargo/bin')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/bin')
-$env.PATH = ($env.PATH | split row (char esep) | append '/home/linuxbrew/.linuxbrew/sbin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.phpenv/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.phpenv/shims')
 $env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/.local/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/sbin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/bin')
@@ -22,6 +23,11 @@ $env.PATH = ($env.PATH | split row (char esep) | append '/sbin, /bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/games')
 $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/games')
 $env.PATH = ($env.PATH | split row (char esep) | append '/snap/bin')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/run/user/1000/fnm_multishells/5855_1693429904358/bin')
-$env.TERM = 'xterm-256color'
-
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/tools/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/platform-tools')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/cmdline-tools/latest')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/build-tools')
+$env.PATH = ($env.PATH | split row (char esep) | append '/home/mentalist/Android/Sdk/emulator')
+fnm env --json | from json | load-env
+$env.PATH = ($env.PATH | append $"($env.FNM_MULTISHELL_PATH)/bin")

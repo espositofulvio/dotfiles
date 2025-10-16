@@ -13,8 +13,6 @@ request = "launch"
 completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}" }
 
-
-
 [[language]]
 name = "python"
 language-servers = [ "pyright", "ruff" ]
@@ -22,15 +20,18 @@ language-servers = [ "pyright", "ruff" ]
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
 
+[language-server.pyright]
+command = "uv"
+args = ["run", "pyright-langserver", "--stdio"]
+
+# if you choose `ruff-lsp`
 [language-server.ruff]
-command = "ruff-lsp"
+command = "uv"
+args = [ "tool", "run", "ruff", "server"]
 
 [language-server.ruff.config.settings]
 args = ["--ignore", "E501"]
 
-[language.formatter]
-command = "ruff"
-args = ["format"]
 
 [language-server.phpactor]
 command = "phpactor"
